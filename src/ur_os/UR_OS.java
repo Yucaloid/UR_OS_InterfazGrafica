@@ -185,16 +185,28 @@ public class UR_OS extends Application {
         Scene scene = new Scene(mainLayout, 1000, 600);
         
         try {
-            File cssFile = new File("resources/styles.css"); // Asegúrate de que la ruta es correcta
+            // Primero, intenta cargar el CSS desde la carpeta "resources" en el sistema de archivos.
+            File cssFile = new File("resources/styles.css");
             if (cssFile.exists()) {
                 String css = cssFile.toURI().toURL().toExternalForm();
                 scene.getStylesheets().add(css);
+                System.out.println("CSS cargado desde el sistema de archivos: " + css);
             } else {
-                System.out.println("CSS file not found at path: " + cssFile.getAbsolutePath());
+                // Si no se encuentra en el sistema de archivos, intenta cargarlo desde el classpath (dentro del JAR)
+                cssFile = new File("styles.css");
+                if (cssFile != null) {
+                    String css = cssFile.toURI().toURL().toExternalForm();
+                    scene.getStylesheets().add(css);
+                    System.out.println("CSS cargado desde el classpath: " + css);
+                } 
             }
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
         }
+
+        
+
+        
 
         primaryStage.setTitle("UR_OS Process Management 1.0");
         primaryStage.setScene(scene);
