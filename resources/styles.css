@@ -1,0 +1,13 @@
+/* styles.css */
+
+.progress-bar-running {
+    -fx-accent: #aec6cf; /* Azul claro para cuando están corriendo */
+}
+
+.progress-bar-stopped {
+    -fx-accent: #f7a6a6; /* Rojo claro para cuando están en espera */
+}
+
+.progress-bar-finished {
+    -fx-accent: #a8e6a1; /* Verde claro para cuando están finalizados */
+}
