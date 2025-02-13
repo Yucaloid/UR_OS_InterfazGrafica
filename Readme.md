@@ -67,7 +67,7 @@ Para instalar y ejecutar la aplicación en una PC sin Java instalado:
 
 1️⃣ Ejecutar el Instalador
 
-[Descargar UR_OS 1.0](build/UR_OS-1.0.msi)
+[Descargar UR_OS 1.0](https://github.com/Yucaloid/UR_OS_InterfazGrafica/releases/download/V1.0/UR_OS-1.0.msi)
 
 Espera a que se complete el proceso.
 
